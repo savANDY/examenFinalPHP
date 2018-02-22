@@ -9,8 +9,8 @@ $lineas = file('../datos/clientes.txt');
 //        echo "Línea #<b>{$num_linea}</b> : " . htmlspecialchars($linea) . "<br />\n";
         $contacto = explode(":", $linea);
         $fichero = new Fichero() ;
-        $fichero->crear_contacto_Fichero($contacto[0], $contacto[1], $contacto[2]);
+        $fichero->crear_contacto_Fichero(trim($contacto[0]), trim($contacto[1]), trim($contacto[2]),trim($contacto[3]));
     }
 
-header('Location: ../controlador/controladorListadoClientes.php');
+//header('Location: ../controlador/controladorListadoClientes.php');
 ?>
